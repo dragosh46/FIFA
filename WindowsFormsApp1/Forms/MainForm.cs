@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -61,18 +62,33 @@ namespace WindowsFormsApp1
 
         private void TransferaJucator(object sender, EventArgs e)
         {
-            Transfer transfer = new Transfer();
-            transfer.ShowDialog(this);
-
+            try
+            {
+                Transfer transfer = new Transfer();
+                transfer.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
 
-      
-
-       
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try {
+                Campionat Campionat = new Campionat();
+                Campionat.ShowDialog(this);
+            }
+            catch (Exception ex)
+             
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
     public class Jucator
     {

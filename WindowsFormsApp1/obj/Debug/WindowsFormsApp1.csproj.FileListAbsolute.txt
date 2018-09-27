@@ -10,3 +10,4 @@ C:\Users\dragos.mateiasi\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debu
 C:\Users\dragos.mateiasi\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\dragos.mateiasi\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\dragos.mateiasi\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\dragos.mateiasi\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.Campionat.resources
