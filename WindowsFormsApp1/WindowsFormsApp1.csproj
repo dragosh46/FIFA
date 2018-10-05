@@ -50,6 +50,8 @@
     <Compile Include="Classes\DbOperations.cs" />
     <Compile Include="Classes\Echipa.cs" />
     <Compile Include="Classes\Jucator.cs" />
+    <Compile Include="Classes\Rezultate.cs" />
+    <Compile Include="Classes\RezultateDB.cs" />
     <Compile Include="Classes\SaveLaTransfer.cs" />
     <Compile Include="Classes\TransferaJucator.cs" />
     <Compile Include="Forms\AdaugaEchipaForm.cs">
@@ -69,6 +71,12 @@
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RezultateEchipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RezultateEchipe.Designer.cs">
+      <DependentUpon>RezultateEchipe.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RezultateEchipe.resx">
+      <DependentUpon>RezultateEchipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Transfer.resx">
       <DependentUpon>Transfer.cs</DependentUpon>

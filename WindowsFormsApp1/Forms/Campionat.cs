@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Classes;
 
 namespace WindowsFormsApp1.Forms
 {
     public partial class Campionat : Form
     {
         private string _echipa1;
+        private string _echipa2;
         private int _id_Echipa1;
+        private int _id_Echipa2;
 
         public Campionat()
         {
@@ -28,12 +31,34 @@ namespace WindowsFormsApp1.Forms
 
         private void Campionat_Load(object sender, EventArgs e)
         {
-            _id_Echipa1 = (listBox2.SelectedItem as Echipa).ID_Echipa;
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-           _echipa1=(listBox1.SelectedItem as Echipa).Nume;
+        public void listBox1_SelectedIndexChanged()
+        {
+            _id_Echipa1 = (listBox1.SelectedItem as Echipa).ID_Echipa;
+            _echipa1 = (listBox1.SelectedItem as Echipa).Nume;
+        }
+
+        private void ArataUltimeleRezultateBTN(object sender, EventArgs e)
+        {
+            try
+            {
+                RezultateDB Rez = new RezultateDB();
+                Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
+                RezultateEchipe r = new RezultateEchipe(_id_Echipa1, _id_Echipa2);
+                r.ShowDialog(this);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public void listBox2_SelectedIndexChanged()
+        {
+            _id_Echipa2 = (listBox2.SelectedItem as Echipa).ID_Echipa;
+            _echipa2 = (listBox2.SelectedItem as Echipa).Nume;
         }
     }
 }

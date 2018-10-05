@@ -13,7 +13,8 @@ namespace WindowsFormsApp1
         {
             string ConnectionString = "Data Source=STSCV-01W028BIS;Initial Catalog=FifaManager;Integrated Security=True";
 
-            string querry = "select ID_Jucator,nume,prenume from Jucator ";
+            string querry = "select ID_Jucator,nume,prenume from Jucator";
+         
 
             SqlConnection con = new SqlConnection(ConnectionString);
             con.Open();
