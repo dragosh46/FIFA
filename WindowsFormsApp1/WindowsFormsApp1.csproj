@@ -52,6 +52,7 @@
     <Compile Include="Classes\Jucator.cs" />
     <Compile Include="Classes\Rezultate.cs" />
     <Compile Include="Classes\RezultateDB.cs" />
+    <Compile Include="Classes\SalveazaMeci.cs" />
     <Compile Include="Classes\SaveLaTransfer.cs" />
     <Compile Include="Classes\SimulareMeci.cs" />
     <Compile Include="Classes\TransferaJucator.cs" />

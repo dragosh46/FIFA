@@ -66,7 +66,7 @@ namespace WindowsFormsApp1.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AfisareScor p = new AfisareScor(_echipa1,_echipa2);
+            AfisareScor p = new AfisareScor(_echipa1,_echipa2,_id_Echipa1,_id_Echipa2);
             p.ShowDialog(this);
         }
     }
