@@ -27,13 +27,14 @@ namespace WindowsFormsApp1.Forms
             listBox1.DataSource = list;
             var list1 = op.DbListaEchipe();
             listBox2.DataSource = list1;
+
         }
 
         private void Campionat_Load(object sender, EventArgs e)
         {
         }
 
-        public void listBox1_SelectedIndexChanged()
+        public void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             _id_Echipa1 = (listBox1.SelectedItem as Echipa).ID_Echipa;
             _echipa1 = (listBox1.SelectedItem as Echipa).Nume;
@@ -44,7 +45,9 @@ namespace WindowsFormsApp1.Forms
             try
             {
                 RezultateDB Rez = new RezultateDB();
-                Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
+               Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
+            
+
                 RezultateEchipe r = new RezultateEchipe(_id_Echipa1, _id_Echipa2);
                 r.ShowDialog(this);
             }
@@ -55,10 +58,16 @@ namespace WindowsFormsApp1.Forms
 
         }
 
-        public void listBox2_SelectedIndexChanged()
+        public void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             _id_Echipa2 = (listBox2.SelectedItem as Echipa).ID_Echipa;
             _echipa2 = (listBox2.SelectedItem as Echipa).Nume;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AfisareScor p = new AfisareScor(_echipa1,_echipa2);
+            p.ShowDialog(this);
         }
     }
 }
