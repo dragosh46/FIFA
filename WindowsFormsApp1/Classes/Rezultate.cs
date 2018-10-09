@@ -8,6 +8,7 @@ namespace WindowsFormsApp1.Classes
 {
     public class Rezultate
     {
+        public string Scor { get; set; }
         public string NumeEchipa1 { get; set; }
         public string NumeEchipa2 { get; set; }
     }

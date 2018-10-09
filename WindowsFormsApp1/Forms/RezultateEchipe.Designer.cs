@@ -44,10 +44,13 @@
             // 
             // listBox1
             // 
+            this.listBox1.DisplayMember = "Scor";
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 25;
             this.listBox1.Location = new System.Drawing.Point(12, 34);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(274, 394);
+            this.listBox1.Size = new System.Drawing.Size(535, 379);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -55,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(568, 450);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Name = "RezultateEchipe";

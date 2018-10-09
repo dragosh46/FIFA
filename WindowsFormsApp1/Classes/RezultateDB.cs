@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.Classes
 
             SqlParameter param = new SqlParameter("@IdEchipa1", SqlDbType.VarChar); param.Value = _id_Echipa1; cmd.Parameters.Add(param);
             SqlParameter param1 = new SqlParameter("@IdEchipa2", SqlDbType.VarChar); param1.Value = _id_Echipa2; cmd.Parameters.Add(param1);
-            cmd.CommandText = @"select Scor_meci from Meci where @IdEchipa1 = Id_Echipa1 And @IdEchipa2 = Id_Echipa2";
+            cmd.CommandText = @"select Scor_meci,Echipa1,Echipa2 from Meci where @IdEchipa1 = Id_Echipa1 And @IdEchipa2 = Id_Echipa2";
             cmd.ExecuteNonQuery();
             List<Rezultate> rez = new List<Rezultate>();
             using (SqlDataReader dr = cmd.ExecuteReader())
@@ -32,8 +32,7 @@ namespace WindowsFormsApp1.Classes
                 while (dr.Read())
                 {
                     Rezultate r = new Rezultate();
-                    r.NumeEchipa1 = dr.GetString(0);
-                    r.NumeEchipa2 = dr.GetString(1);
+                    r.Scor = dr.GetString(1) + " - " + dr.GetString(2) + "       " + dr.GetString(0); 
                     rez.Add(r);
                 }
             }

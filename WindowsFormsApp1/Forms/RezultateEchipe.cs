@@ -20,7 +20,8 @@ namespace WindowsFormsApp1.Forms
         {
             InitializeComponent();
             RezultateDB Rez = new RezultateDB();
-            Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
+            var list = Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
+            listBox1.DataSource = list;
         }
 
      
@@ -31,9 +32,7 @@ namespace WindowsFormsApp1.Forms
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RezultateDB Rez = new RezultateDB();
-            var list = Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
-            listBox1.DataSource = list;
+           
         }
     }
 }
