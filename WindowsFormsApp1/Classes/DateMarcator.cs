@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Classes
 {
-    class Jucator
+    class DateMarcator
     {
-        int Id_Jucator { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
-        public int Numar_goluri { get; set; }
     }
 }

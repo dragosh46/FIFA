@@ -46,10 +46,11 @@ namespace WindowsFormsApp1.Forms
             {
                 RezultateDB Rez = new RezultateDB();
                Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
-            
-
+          
                 RezultateEchipe r = new RezultateEchipe(_id_Echipa1, _id_Echipa2);
+                Marcator M = new Marcator();
                 r.ShowDialog(this);
+               
             }
             catch(Exception ex)
             {

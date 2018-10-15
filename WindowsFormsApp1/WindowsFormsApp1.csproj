@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DateMarcator.cs" />
     <Compile Include="Classes\DbOp.cs" />
     <Compile Include="Classes\DbOperations.cs" />
     <Compile Include="Classes\Echipa.cs" />
     <Compile Include="Classes\Jucator.cs" />
+    <Compile Include="Classes\Marcator.cs" />
     <Compile Include="Classes\Rezultate.cs" />
     <Compile Include="Classes\RezultateDB.cs" />
     <Compile Include="Classes\SalveazaMeci.cs" />
