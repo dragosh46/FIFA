@@ -25,6 +25,7 @@ namespace WindowsFormsApp1.Forms
             DbOperations op = new DbOperations();
             var list = op.DbListaEchipe();
             listBox1.DataSource = list;
+
             var list1 = op.DbListaEchipe();
             listBox2.DataSource = list1;
 

@@ -13,6 +13,7 @@ namespace WindowsFormsApp1.Classes
         public Tuple<int, int> ScorRandom()
         {
             var random = new Random();
+             
             var questions = new List<int>
             {
                 0,1,2,3,1,4,0,5,1,2,6,0,7,8,1,2,9,0,1,
@@ -29,7 +30,7 @@ namespace WindowsFormsApp1.Classes
             var t1 = questions1[random.Next(questions1.Count)];
             return new Tuple<int, int>(t,t1);
 
-
+            
         }
 
 

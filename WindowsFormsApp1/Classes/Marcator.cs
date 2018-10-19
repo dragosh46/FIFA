@@ -32,8 +32,8 @@ namespace WindowsFormsApp1.Classes
                 while (dr.Read())
                 {
                     DateMarcator r = new DateMarcator();
-                    r.Nume = dr.GetString(0);
-                    r.Prenume = dr.GetString(1);
+                    r.Nume = dr.GetString(0) +" "+ dr.GetString(1);
+                   
                     rez.Add(r);
                 }
             }
@@ -41,11 +41,10 @@ namespace WindowsFormsApp1.Classes
                 var random = new Random();
                 
                 int index = random.Next(rez.Count);
+            var t1 = rez[index];
 
-                
-           
 
-            return rez[index];
+            return t1;
         }
 
        

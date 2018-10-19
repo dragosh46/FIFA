@@ -25,7 +25,9 @@ namespace WindowsFormsApp1.Forms
             var list = Rez.Rezultatele(_id_Echipa1, _id_Echipa2);
             listBox1.DataSource = list;
             Marcator Mar = new Marcator();
-            Mar.Jucatori(_id_Echipa1, _id_Echipa2);
+            
+            var dateMarcator= Mar.Jucatori(_id_Echipa1, _id_Echipa2);
+            listBox2.Items.Add(dateMarcator);
          
         }
 
@@ -38,6 +40,11 @@ namespace WindowsFormsApp1.Forms
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
